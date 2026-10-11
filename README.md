@@ -2,6 +2,8 @@ A reflection-layer-only memory plugin. It periodically distills agent session tr
 
 You need this if your agent forgets decisions across sessions and you distrust opaque auto-memory. You don't if you want similarity search over history — that's a different layer.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Agent memory systems compete on recall quality; the "reflect" operation is the quiet differentiator (vectorize-io/hindsight built its benchmark-winning memory around retain/recall/reflect and mental-model pages). The overlooked angle: **memory writes are the governance surface**. Whatever writes memory controls future agent behavior, yet most systems auto-write with no human audit trail — then everyone acts surprised when a stale wrong "fact" poisons every downstream session. Restated: memory should be *learned in public*, with diffs a human can reject.
